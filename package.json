@@ -16,7 +16,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
-    "eslint": "^5.12.1",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-jsx-a11y": "^6.2.0",
@@ -27,11 +27,14 @@
   },
   "scripts": {
     "clear-build-cache": "rm -rf .cache/ dist/",
-    "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "Brian Holt <btholt+complete-intro-to-react@gmail.com>",
   "license": "Apache-2.0",
